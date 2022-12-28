@@ -1,0 +1,72 @@
+    <div class="header d-flex justify-content-space-between align-items-center">
+        <span class="header-text">Kanban Project Management Tool</span>
+        <img class="d-none join-logo-mobile" src="./assets/img/buttons/join-logo-mobile.png" alt="">
+        <div class="header-pics d-flex align-items-center">
+            <div class="help-container"><a href="help.html"><img class="question-help-img"
+                        src="./assets/img/navbar/question.svg"></a></div>
+            <div class="outer-circle d-flex justify-content-center align-items-center"
+                onclick="mobileNavMenuOpenAndClose()">
+                <div class="inner-circle d-flex justify-content-center align-items-center"><img id="profile-pic"
+                        class="profile-pic" src="./assets/img/contacts/newUser.png"></div>
+            </div>
+        </div>
+        <div id="logout-btn" class="logout d-none animateFadeIn">
+            <div id="nav-item-help" class="mobile-nav hide-nav" onclick="switchOtherHtml('help.html?')">Help</div>
+            <div class="mobile-nav hide-nav" onclick="switchOtherHtml('imprint.html?')">Imprint</div>
+            <div class="mobile-nav hide-nav" onclick="switchOtherHtml('privacy.html?')">Privacy</div>
+            <div id="nav-item-logout" class="mobile-nav" onclick="logout()">Log Out</div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-inner-container d-flex flex-column align-items-center justify-content-around">
+            <div class="logo d-flex justify-content-center">
+                <img class="navbar-join-logo" src="./assets/img/navbar/Logo.png">
+            </div>
+
+            <div class="menu-container d-flex justify-content-center w-100">
+                <div class="menu d-flex flex-column w-100 align-items-center">
+                    <div id="summary" class="single-menu">
+                        <a class="d-flex align-items-center" href="summary.html">
+                            <img id="summary-icon" src="./assets/img/navbar/summary.svg">
+                            <span id="summary-text" class="menu-text">Summary</span>
+                        </a>
+                    </div>
+                    <div id="board" class="single-menu">
+                        <a class="d-flex align-items-center" href="board.html">
+                            <img id="board-icon" src="./assets/img/navbar/board.svg">
+                            <span id="board-text" class="menu-text">Board
+                            </span>
+                        </a>
+                    </div>
+                    <div id="add_task" class="single-menu">
+                        <a class="d-flex align-items-center" href="add_task.html">
+                            <img id="add_task-icon" src="./assets/img/navbar/add.svg">
+                            <span id="add_task-text" class="menu-text">Add Task</span>
+                        </a>
+                    </div>
+                    <div id="contacts" class="single-menu padding-bottom">
+                        <a class="d-flex align-items-center" href="contacts.html">
+                            <img id="contacts-icon" src="./assets/img/navbar/contacts.svg">
+                            <span id="contacts-text" class="menu-text">Contacts</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer w-100">
+                <div id="imprint" class="single-menu d-flex align-items-center">
+                    <a class="d-flex align-items-center" href="imprint.html">
+                        <img id="imprint-icon" src="./assets/img/navbar/legal.png">
+                        <span id="imprint-text" class="menu-text">Legal notice</span>
+                    </a>
+                </div>
+                <div id="privacy" class="single-menu d-flex align-items-center">
+                    <a class="d-flex align-items-center" href="privacy.html">
+                        <img id="privacy-icon" src="./assets/img/navbar/legal.png">
+                        <span id="privacy-text" class="menu-text">Data Privacy
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="empty-container"></div>

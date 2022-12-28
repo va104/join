@@ -1,0 +1,255 @@
+@media(max-width: 1000px) {
+    /* GENERAL max-width: 1000px */
+
+    .subtitle-overlay {
+        font-size: 18px;
+        color: white;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .content {
+        top: 140px;
+    }
+
+    .join-logo-mobile {
+        display: block;
+    }
+
+    /* ADD Task max-width: 1000px */
+
+    #add-task-btns {
+        top: 150px;
+    }
+
+    /* CONTACTS max-width: 1000px */
+
+    .contact-overlay {
+        flex-direction: column;
+        width: 450px;
+        height: 100vh;
+    }
+
+    #edit-cancel-btn-mobile {
+        display: none;
+    }
+
+    .contact-avatar-input {
+        position: absolute;
+        flex-direction: column;
+        top: 101px;
+        left: 0;
+        right: 0;
+    }
+
+    #cancel-btn-contacts {
+        display: none;
+    }
+
+    .btn-container-contacts {
+        position: absolute;
+        bottom: -322px;
+    }
+
+    .input-contact {
+        width: 250px;
+    }
+
+    #create-contact-btn {
+        height: 50px;
+    }
+
+    .close-img {
+        position: absolute;
+        top: -255px;
+        filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(120deg) brightness(108%) contrast(100%);
+    }
+
+    #kanban-subheadline {
+        font-size: 18px;
+        position: absolute;
+        top: -60px;
+        display: block;
+        font-size: 18px;
+        font-weight: unset;
+    }
+
+    .overlay-left {
+        width: 100%;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        height: 45%;
+    }
+
+    .overlay-right {
+        width: 100%;
+        position: relative;
+    }
+
+    .overlay-logo {
+        width: 50px;
+    }
+
+    .contact-content {
+        padding-top: 100px;
+    }
+
+    .header-text {
+        display: none;
+    }
+
+    /* IMPRINT max-width: 1000px */
+
+    #h1-imprint {
+        position: relative;
+    }
+
+    .imprint-back {
+        position: absolute;
+        top: 7px;
+        left: 349px;
+        width: 30px;
+        display: block;
+    }
+
+    /*SUMMARY max-width: 1000px */
+
+    .content-cards-top-single {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content-cards-middle-single {
+        width: 430px;
+    }
+
+    .content-cards-bottom-single {
+        width: 206px;
+    }
+
+
+    /* LOGIN max-width: 1000px */
+
+    .input-container-login {
+        width: 296px;
+    }
+
+    /* BOARD max-width: 1000px */
+    .progressbar-inner {
+        width: 57%;
+
+}
+
+}
+
+@media (max-width: 975px) {
+    /* BOARD max-width: 975px */
+
+
+    .searchbox {
+        width: 55%;
+    }
+
+    .searchbox img {
+        padding-left: 10px;
+    }
+
+    .board-head {
+        width: 48%;
+    }
+
+    /* .board-inner-card { */
+        /* min-width: 48%;
+        width: 48%; */
+    /* } */
+
+    .progressbar-inner {
+        width: 65%;
+    }
+
+    .board-assigned {
+        width: 75%;
+    }
+
+    .display-category {
+        font-size: 20px;
+    }
+
+    .display-description {
+        font-size: 19px;
+    }
+
+    .display-title {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 925px) {
+
+    .searchbox {
+        width: 45%;
+    }
+
+    .board-content {
+        padding: 0px !important;
+    }
+
+    .inputfield {
+        width: 67%;
+    }
+
+    .progressbar-inner {
+        width: 62%;
+    }
+
+    .board-assigned {
+        width: 74%;
+    }
+
+}
+
+@media (max-width: 860px) {
+
+    .board-headline {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .searchbox {
+        width: 100%;
+    }
+
+    .inputfield {
+        width: 100%;
+    }
+
+    .m-left-24 {
+        margin-left: 14px;
+    }
+
+    .board-head {
+        width: 53%;
+    }
+
+    /* .board-inner-card {
+        min-width: 53%;
+        width: 53%; */
+    /* } */
+
+    .progressbar-inner {
+        width: 55%;
+
+    }
+
+    .password-mask {
+        width: 580px;
+    }
+
+    .btn-text-board{
+        width: 146px;
+    }
+}
+
+

@@ -1,0 +1,327 @@
+:root {
+    --contact-blue: hsl(253, 84%, 46%);
+    --contact-green: hsl(130, 84%, 46%);
+    --contact-red: hsl(350, 84%, 46%);
+    --contact-yellow: hsl(51deg 76% 49%);
+    --contact-violet: hsl(253, 58%, 76%);
+    --contact-brown: hsl(32, 78%, 44%);
+    --contact-orange: hsl(29, 71%, 63%);
+    --contact-darkgreen: hsl(101, 77%, 21%);
+    --contact-airblue: hsl(212, 69%, 64%);
+    --contact-pink: hsl(310, 84%, 46%);
+    --contact-lila: hsl(293, 88%, 51%);
+    --contact-black: hsl(252, 71%, 3%);
+    --contact-grey: hsl(270, 1%, 34%);
+    --mailto: #007CEE;
+}
+
+.body-contact {
+    overflow-x: hidden;
+}
+
+.bg-contact-blue {
+    background-color: var(--contact-blue);
+}
+
+.bg-contact-green {
+    background-color: var(--contact-green);
+}
+
+.bg-contact-red {
+    background-color: var(--contact-red);
+}
+
+.bg-contact-yellow {
+    background-color: var(--contact-yellow);
+}
+
+.bg-contact-violet {
+    background-color: var(--contact-violet);
+}
+
+.bg-contact-brown {
+    background-color: var(--contact-brown);
+}
+
+.bg-contact-orange {
+    background-color: var(--contact-orange);
+}
+
+.bg-contact-darkgreen {
+    background-color: var(--contact-darkgreen);
+}
+
+.bg-contact-airblue {
+    background-color: var(--contact-airblue);
+}
+
+.bg-contact-lila {
+    background-color: var(--contact-lila);
+}
+
+.bg-contact-pink {
+    background-color: var(--contact-pink);
+}
+
+.bg-contact-black {
+    background-color: var(--contact-black);
+}
+
+.bg-contact-grey {
+    background-color: var(--contact-grey);
+}
+
+.bg-contact-light-grey {
+    background-color: var(--light-grey);
+}
+
+.content-contacts {
+    position: fixed;
+    top: 100px;
+    left: 251px;
+
+}
+
+.left-section {
+    width: 462px;
+    background-color: white;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+    justify-content: center;
+}
+
+.left-section-container {
+    width: 470px;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    background-color: white;
+}
+
+/* width */
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+.scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+    background: #A8A8A8;
+    border-radius: 10px;
+}
+
+.header-text-mobile{
+    display: none;
+}
+
+.contact-content {
+    padding-top: 50px;
+}
+
+.contact-letter {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    font-size: 21px;
+    margin-bottom: 24px;
+    width: 300px;
+}
+
+.contact-letter span {
+    padding-left: 24px;
+    width: 100%;
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 16px;
+}
+
+.contact-avatar {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.contact-avatar-big {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--white);
+    font-weight: bold;
+    border: solid 3px white;
+}
+
+.contact-avatar-outer {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: 8px;
+    background-color: var(--white);
+}
+
+.contact-avatar-outer-big {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-top: 8px;
+    background-color: var(--white);
+}
+
+.mailto {
+    color: var(--mailto);
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.contact-name {
+    font-size: 21px;
+    margin: 8px 0 8px 8px;
+}
+
+.contact-name-big {
+    font-size: 47px;
+    margin: 12px 0 0 0;
+}
+
+.contact-data {
+    margin-left: 24px;
+}
+
+.contact-data-big {
+    margin-left: 75px;
+}
+
+.contact-card-small {
+    padding: 16px;
+    width: 310px;
+    overflow-x: scroll;
+}
+
+.contact-data-content {
+    margin-top: 50px;
+}
+
+.contact-card-small:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #f5f3f382 0%, #d3d3d36b 100%);
+    border-radius: 10px;
+    color: black;
+}
+
+.right-section {
+    position: absolute;
+    top: 10px;
+    left: 570px;
+    min-width: 40vw;
+    height: calc(100vh - 210px);
+}
+
+.add-task {
+    color: var(--light-blue);
+}
+
+.add-task img {
+    margin-right: 8px;
+}
+
+.edit-img {
+    height: 31px;
+}
+
+.mailto-big {
+    color: var(--mailto);
+}
+
+.contact-overlay {
+    width: 930px;
+    height: 40vh;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 250px;
+}
+
+.overlay-left {
+    background-color: var(--dark-blue);
+    border-radius: 10px 0 0 10px;
+    width: 40%;
+}
+
+.overlay-right {
+    width: 60%;
+}
+
+.input-container {
+    border: 1px solid var(--light-grey);
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+.input-container img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.input-contact {
+    border: none;
+    outline: none;
+    width: 305px;
+    height: 33px;
+    font-size: 21px;
+}
+
+.buttons-margin {
+    margin: 0 0 0 104px !important;
+}
+
+.close-img:hover {
+    cursor: pointer;
+    background-color: #e5e1e1;
+    border-radius: 100%;
+}
+
+.edit-container {
+    padding: 0 8px 0 8px;
+}
+
+.edit-container:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #f5f3f3 0%, #cccaca 100%);
+    border-radius: 10px;
+}
+
+.clickedContact {
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 10px;
+}
+
+.clickedContact:hover {
+    cursor: pointer;
+    background-color: var(--dark-blue) !important;
+    background: none;
+    color: white;
+}
+
+.back-mobile{
+    position: absolute;
+    width: 25px;
+    top: 25px;
+    right: 55px;
+    display: none;
+}
+
+.contact-card-big{
+    position: relative;
+}
+
+
+.blue-font:hover{
+    font-weight: bold;
+}

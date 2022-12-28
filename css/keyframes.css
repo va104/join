@@ -1,0 +1,163 @@
+
+.animateFadeIn {
+    animation: fadeInRight 0.5s ease 0s 1 normal forwards;
+}
+
+.animateFadeInBottom {
+    animation: fadeInBottom 0.5s ease 0s 1 normal forwards;
+}
+
+.animateFadeOut {
+    animation: fadeOutRight 0.5s ease 0s 1 normal forwards;
+}
+
+.animateFadeOutBottom {
+    animation: fadeOutBottom 0.5s ease 0s 1 normal forwards;
+    overflow: hidden;
+}
+
+.animateOpacityIn {
+    animation: fadeOpacityIn 0.5s ease 0s 1 normal forwards;
+}
+
+.animateOpacityOut {
+    animation: fadeOpacityOut 0.5s ease 0s 1 normal forwards;
+}
+
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeOutBottom {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeInWithoutOpacity {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutWithoutOpacity {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeOpacityIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOpacityOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+@keyframes joinlogo {
+    0% {
+        
+        transform: scale(1.6) translate(400%, 150% );
+    }
+
+    100% {
+       
+        transform: scale(1.0) translate(0);
+    }
+}
+
+@keyframes joinlogoMobile {
+    0% {
+        
+        transform: scale(1.6) translate(150%, 200% );
+    }
+
+    100% {
+       
+        transform: scale(1.0) translate(0);
+    }
+}

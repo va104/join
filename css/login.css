@@ -1,0 +1,78 @@
+.login-content {
+    width: 650px;
+    height: 510px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    position: relative;
+}
+
+.login-container {
+    height: calc(100vh - 50px);
+}
+
+.horizontal-line-login {
+    width: 120px;
+}
+
+.input-container-login {
+    width: 351px;
+    margin-top: 38px;
+    padding: 8px;
+}
+
+.input-container-reset {
+    margin-top: 24px;
+    padding: 8px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 55px;
+    left: 50px;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+}
+
+.password-mask {
+    width: 780px;
+    height: 466px;
+}
+
+.login-overlay {
+    position: absolute;
+    background-color: var(--bg-grey);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    animation: fadeOpacityOut 2s ease 0s 1 normal forwards;
+}
+
+.join-logo {
+    z-index: 1000;
+    animation: joinlogo 1s ease 0s 1 normal forwards;
+}
+
+.input-contact-login {
+    border: none;
+    outline: none;
+    width: 305px;
+    height: 33px;
+    font-size: 21px;
+}
+
+#forgot-password-text{
+    width: 162px;
+}
+
+.back-btn:hover{
+    width: 30px;
+}
+
+
+
+

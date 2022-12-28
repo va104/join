@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/add_task.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_min_1200.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_1040-1180.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_860-1000.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_max_770.css">
+    <link rel="stylesheet" href="css/mobile/mobile_height.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_max_400.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <script src="script.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="js/add_task_aside_functions.js"></script>
+    <script src="js/add_task.js"></script>
+    <script src="js/edit_task.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/delete.js"></script>
+    <title>Join-Kanban Contacts</title>
+</head>
+
+<body class="body-contact" onload="initContacts()">
+    <div w3-include-html="./assets/templates/navbar.html"></div>
+
+    <div class="content-contacts d-flex">
+        <!-- contact overview on left side -->
+        <aside class="left-section-container">
+            <div class="left-section d-flex scroll">
+
+                <div id="contact-content" class="contact-content w-80 d-flex flex-column align-items-center scroll">
+
+                </div>
+
+                <div id="contact-content-mobile" class="contact-content w-80 d-none flex-column align-items-center scroll">
+
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- contact detail information on right side -->
+        <div id="right-section" class="right-section d-flex flex-column justify-content-space-between">
+            <div>
+                <div class="headline d-flex align-items-center contacts-headline">
+                    <span class="header-text-mobile">Kanban Project Management Tool</span>
+                    <h1>Contacts</h1>
+                    <div class="headline-line-text-container d-flex align-items-center">
+                        <div class="headline-line"></div>
+                        <span class="headline-text">Better with a team</span>
+                    </div>
+                </div>
+                <div id="contact-data-content" class="contact-data-content">
+
+                </div>
+            </div>
+            <div id="mobile-contact-btn-container" class="d-flex justify-content-end new-contact-btn-container">
+                <button id="new-contact-btn-mobile" class="darkblue-btn m-left-24"
+                    onclick="showOverlayContact('new-contact', 'new-contact-overlay')">
+                    <span class="f-18">New Contact</span>
+                    <img class="btn-icons-contact" src="./assets/img/buttons/newcontact.png" alt="">
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- add new contact overlay -->
+    <div id="new-contact"
+        class="overlay d-flex justify-content-center align-items-center d-none animateOpacityIn d-none">
+        <div id="new-contact-overlay" class="contact-overlay d-flex">
+            <div class="overlay-left d-flex justify-content-center">
+                <div class="d-flex flex-column justify-content-center h-80">
+                    <img class="overlay-logo" src="./assets/img/navbar/Logo.png" alt="">
+                    <h2>Add Contact</h2>
+                    <p class="subtitle-overlay">Tasks are better with a team</p>
+                    <div class="horizontal-line"></div>
+                </div>
+            </div>
+            <div class="overlay-right d-flex flex-column justify-content-center">
+                <div class="w-100 d-flex justify-content-end">
+                    <img class="m-right-24 close-img"
+                        onclick="closeOverlayContact('new-contact', 'new-contact-overlay')" src="./assets/img/buttons/close.svg"
+                        alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-evenly h-70 contact-avatar-input">
+                    <div
+                        class="contact-avatar-outer-big bg-contact-blue d-flex align-items-center justify-content-center">
+                        <div
+                            class="contact-avatar-big bg-contact-light-grey d-flex align-items-center justify-content-center">
+                            <img src="./assets/img/contacts/user.png" alt="">
+                        </div>
+                    </div>
+                    <form onsubmit="newContact(); return false;" class="d-flex flex-column align-items-flex-end">
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="newContact-name"
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Name" type="text" required>
+                            <img src="./assets/img/contacts/person.png" alt="">
+                        </div>
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="newContact-email"
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Email" type="email" required>
+                            <img src="./assets/img/contacts/mail.png" alt="">
+                        </div>
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="newContact-phone"
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Phone" type="tel" required>
+                            <img src="./assets/img/contacts/phone.png" alt="">
+                        </div>
+                        <button class="darkblue-btn m-top-16">
+                            <span class="f-18">create contact</span>
+                            <img class="btn-icons" src="./assets/img/buttons/create.png" alt="">
+                        </button>
+
+                </div>
+                <!-- <div class="buttons buttons-margin justify-content-center btn-container-contacts">
+                    <button id="cancel-btn-contacts" class="light-btn" formnovalidate type="cancel">
+                        <span class="f-18">cancel</span>
+                        <img class="btn-icons" src="./assets/img/buttons/clear.png" alt="">
+                    </button>
+                </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- edit contact overlay -->
+    <div id="edit-contact" class="overlay d-flex justify-content-center align-items-center d-none animateOpacityIn">
+        <div id="edit-contact-overlay" class="contact-overlay d-flex">
+            <div class="overlay-left d-flex justify-content-center">
+                <div class="d-flex flex-column justify-content-center h-80">
+                    <img class="overlay-logo" src="./assets/img/navbar/Logo.png" alt="">
+                    <h2>Edit Contact</h2>
+                    <div class="horizontal-line"></div>
+                </div>
+
+            </div>
+            <div class="overlay-right d-flex flex-column justify-content-center">
+                <div class="w-100 d-flex justify-content-end">
+                    <img class="m-right-24 close-img"
+                        onclick="closeOverlayContact('edit-contact', 'edit-contact-overlay')"
+                        src="./assets/img/buttons/close.png" alt="">
+                </div>
+                <div class="d-flex align-items-center justify-content-evenly h-70 contact-avatar-input">
+                    <div
+                        class="contact-avatar-outer-big bg-contact-blue d-flex align-items-center justify-content-center">
+                        <div id="initialsEditContact"
+                            class="contact-avatar-big d-flex align-items-center justify-content-center">
+                        </div>
+                    </div>
+                    <form onsubmit="saveEditedContact(); return false;" class="d-flex flex-column align-items-flex-end">
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="editContact-name"
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Name" type="text" required>
+                            <img src="./assets/img/contacts/person.png" alt="">
+                        </div>
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="editContact-email" 
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Email" type="email" required>
+                            <img src="./assets/img/contacts/mail.png" alt="">
+                        </div>
+                        <div class="d-flex input-container border-fields input-with-image align-items-center">
+                            <input id="editContact-phone" 
+                                class="d-flex justify-content-center align-items-center input-contact"
+                                placeholder="Phone" type="tel" required>
+                            <img src="./assets/img/contacts/phone.png" alt="">
+                        </div>
+                        <button class="darkblue-btn m-top-16">
+                            <span class="f-18">save</span>
+                        </button>
+                </div>
+                <!-- <div class="buttons buttons-margin justify-content-center btn-container-contacts"> -->
+                    <!-- <button id="edit-cancel-btn-mobile" class="light-btn" formnovalidate type="cancel">
+                        <span class="f-18">cancel</span>
+                        <img class="btn-icons" src="./assets/img/buttons/clear.png" alt="">
+                    </button> -->
+                <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div id="contact-user-response-overlay" class="user-response-overlay d-flex justify-content-center disabled d-none">
+        <div id="userResponseFromBottom" class="darkblue-btn added-to-board d-flex justify-content-center align-items-center">
+            <span id="contact-user-response-overlay-text">Space for dynamic content</span>
+        </div>
+    </div>
+
+     <!-- Add Task -->
+     <div id="add-task-overlay-board" class="overlay d-flex justify-content-center align-items-center d-none" onclick="addClassList('add-task-overlay-board', 'd-none')">
+        <div id="add-task-overlay" class="add-task-overlay d-flex justify-content-center align-items-center" onclick="event.stopPropagation()">
+            <div class="add-task-content-display">
+                <div include-addtask-html="./assets/templates/add_task_template.html"></div>
+            </div>
+            <img src="./assets/img/buttons/close.png" id="close-add-task" alt="" class="close-add-task-overlay" onclick="closeAddTaskForm('add-task-overlay-board', 'add-task-overlay')">
+        </div>
+    </div>
+
+</body>
+
+</html>

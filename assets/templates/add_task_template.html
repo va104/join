@@ -1,0 +1,194 @@
+<div class="content-add-task">
+    <h1 id="content-header">Add Task</h1>
+    <form onsubmit="createNewTask(); return false;">
+        <div id="sections" class="sections d-flex">
+            <div class="section-left">
+                <div class="titleandinput">
+                    <p class="add-task-titles">Title</p>
+                    <input id="title" class="inputfields border-fields f-18 p-15" type="text" placeholder="Enter a title"
+                        required>
+                </div>
+                <div class="titleandinput">
+                    <p class="m-top-28 add-task-titles">Description</p>
+                    <textarea id="description" class="textareas border-fields p-15 f-18" type="text"
+                        placeholder="Enter a description" required></textarea>
+                </div>
+                <div class="titleandinput">
+                    <p class="m-top-28 add-task-titles">Category</p>
+                    <div id="categorybox"
+                        class="input-with-image inputfields border-fields d-flex justify-content-center align-items-center"
+                        onclick="dropdown('categorybox','categories')">
+                        <div id="category"
+                            class="input-with-image inputfields border-fields d-flex justify-content-center align-items-center">
+                            <input id="category-input" class="hidden-input" type="text" required>
+                            <div class="output-container d-flex justify-content-space-between">
+                                <div id="category-output" class="inputfield-nearby-icon d-flex align-items-center">
+                                    Select task Category
+                                </div>
+                                <img id="category-dropdown-arrow" src="./assets/img/add_task/dropdown_arrow.svg"
+                                    class="filter-plus-img" alt="">
+                            </div>
+                        </div>
+                        <ul class="add-task-lists d-none scroll" id="categories">
+                        </ul>
+                    </div>
+                </div>
+                <div id="colorpicker" class="colorpicker d-none">
+                    <div id="colorpicker-0" class="color1 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-0', 0)">
+                        <div id="color-0" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-0">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colorpicker-1" class="color2 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-1', 1)">
+                        <div id="color-1" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-1">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colorpicker-2" class="color3 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-2', 2)">
+                        <div id="color-2" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-2">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colorpicker-3" class="color4 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-3', 3)">
+                        <div id="color-3" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-3">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colorpicker-4" class="color5 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-4', 4)">
+                        <div id="color-4" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-4">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="colorpicker-5" class="color6 m-8 d-flex align-items-center justify-content-center"
+                        onclick="addNewColorToCategory('color-5', 5)">
+                        <div id="color-5" class="color-outer-circle d-flex align-items-center justify-content-center">
+                            <div class="color-inner-circle bg-category-New-5">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="titleandinput">
+                    <div class=" d-flex flex-column m-top-28 assignedTo-container">
+                        <label for="assignedTo" class="m-bottom-18 add-task-titles">Assigned to</label>
+                        <div id="outputbox"
+                            class="outputbox-assignedto input-with-image inputfields border-fields d-flex justify-content-center align-items-center"
+                            onclick="dropdown('outputbox','assignedToSelect')">
+                            <input id="assignedTo-input" class="hidden-input" type="text" required>
+                            <div class="output-container d-flex justify-content-space-between">
+                                <div id="user-assignedTo" class="inputfield-nearby-icon d-flex  flex-column">Select
+                                    contacts to assign</div>
+                                <img src="./assets/img/add_task/dropdown_arrow.svg" class="filter-plus-img" alt="">
+                            </div>
+                        </div>
+                        <ul id="assignedToSelect" class="assignedTo-list add-task-lists scroll d-none">
+                        </ul>
+                        <div id="assignedTo-avatare-container" class="d-flex">
+                        </div>
+                        <div id="invited-member" class="d-flex">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-right">
+                <div class="titleandinput">
+                    <p class="add-task-titles">Due Date</p>
+                    <div
+                        class="input-with-image inputfields border-fields d-flex justify-content-center align-items-center">
+                        <input id="date" class="inputfield-nearby-icon" type="date" required>
+                    </div>
+                </div>
+                <div class="titleandinput">
+                    <p class="m-top-28 add-task-titles">Prio</p>
+                    <input id="priority-input" class="hidden-input" type="text" required>
+                    <div class="d-flex justify-content-space-between priority-container">
+                        <div id="urgent"
+                            class="input-with-image inputfields-small border-fields d-flex justify-content-center align-items-center"
+                            onclick="changePriority('urgent', 'btn-urgent')" formnovalidate>
+                            <p class="f-18">Urgent</p>
+                            <img id="urgent-img" class="p-12" src="./assets/img/add_task/arrow_urgent.svg" alt="">
+                        </div>
+                        <div id="medium"
+                            class="input-with-image inputfields-small border-fields d-flex justify-content-center align-items-center"
+                            onclick="changePriority('medium', 'btn-medium')">
+                            <p class="f-18">Medium</p>
+                            <img id="medium-img" class="p-12" src="./assets/img/add_task/medium.svg" alt="">
+                        </div>
+                        <div id="low"
+                            class="input-with-image inputfields-small border-fields d-flex justify-content-center align-items-center"
+                            onclick="changePriority('low', 'btn-low')" formnovalidate>
+                            <p class="f-18">Low</p>
+                            <img id="low-img" class="p-12" src="./assets/img/add_task/arrow_low.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="titleandinput">
+                    <p class="m-top-28 add-task-titles">Subtasks</p>
+                    <div id="subtasks-container"
+                        class="input-with-image inputfields border-fields d-flex justify-content-center align-items-center">
+                        <div class="output-container d-flex justify-content-space-between">
+                            <input id="subtask-input" class="inputfield-nearby-icon" type="text"
+                                placeholder="Add new Subtask" onfocus="changeIconsInSubtasks()">
+                            <img src="./assets/img/add_task/add.svg" class="filter-plus-img" alt=""
+                                onclick="changeIconsInSubtasks()">
+                        </div>
+                    </div>
+                    <div id="subtasks-output" class="d-flex flex-column scroll">
+                    </div>
+                </div>
+                <div id="add-task-btns" class="buttons">
+                    <button id="cancel-btn-add_task" class="light-btn" type="button" value="Previous"
+                        onclick="clearAddTaskFields()" formnovalidate="formnovalidate">
+                        <span class="f-18">clear</span>
+                        <img class="btn-icons" src="./assets/img/buttons/clear.png" alt="">
+                    </button>
+                    <button id="createTask" class="darkblue-btn m-left-24" type="submit">
+                        <span class="f-18">create task</span>
+                        <img class="btn-icons" src="./assets/img/buttons/create.png" alt="">
+                    </button>
+                    <button id="editTask" class="darkblue-btn m-left-24 d-none">
+                        <span class="f-18">edit task</span>
+                        <img class="btn-icons" src="./assets/img/buttons/create.png" alt="">
+                    </button>
+                </div>
+    </form>
+</div>
+<!-- <div id="addtask-added-board-overlay" class="user-response-overlay d-flex justify-content-center d-none disabled">
+    <div class="darkblue-btn added-to-board d-flex justify-content-center align-items-center">
+        <span>Task added to board</span>
+        <img class="m-left-16" src="./assets/img/board/board.png" alt="">
+    </div>
+</div> -->
+<div id="edittask-added-board-overlay" class="user-response-overlay d-flex justify-content-center disabled d-none">
+    <div class="darkblue-btn added-to-board d-flex justify-content-center align-items-center">
+        <span id="edittask-added-board">Task successfully edited</span>
+        <img class="m-left-16" src="./assets/img/board/board.png" alt="">
+    </div>
+</div>
+<div id="addtask-user-response-overlay" class="user-response-overlay d-flex justify-content-center d-none disabled">
+    <div class="darkblue-btn added-to-board d-flex justify-content-center align-items-center">
+        <span id="addtask-user-response-overlay-text"></span>
+    </div>
+</div>
+<form action="https://vanessa-wuerdinger.developerakademie.net/modul10_join/send_mail/send_mail_invite.php"
+    onsubmit="inviteContact()" method="POST" class="d-none">
+    <input id="invite-input" type="email" name="mail" required>
+    <button id="invite-btn" class="darkblue-btn" type="onsubmit">
+        <span class="f-18">Send me the email</span>
+    </button>
+</form>

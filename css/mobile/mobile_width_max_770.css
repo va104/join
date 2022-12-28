@@ -1,0 +1,888 @@
+@media (max-width: 770px) {
+
+    .welcome {
+        display: none;
+    }
+
+    .deleteCard{
+        margin-left: 0;
+        height: 20%;
+    }
+
+    .welcome-mobile {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        background-color: var(--bg-grey);
+        top: -85px;
+        right: 0;
+        bottom: -85px;
+        left: 0;
+        animation: fadeOpacityOut 3s ease 1500ms 1 normal forwards;
+    }
+
+    .welcome-static {
+        display: none;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100% !important;
+        height: 100px !important;
+        z-index: 100;
+    }
+
+    .navbar-inner-container {
+        height: 100% !important;
+    }
+
+    .header {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .logo {
+        display: none !important;
+    }
+
+    .hide-nav {
+        display: block;
+    }
+
+    #nav-item-logout{
+        text-align: start;
+    }
+
+    .footer {
+        display: none !important;
+    }
+
+
+    .input-contact-login {
+        width: 275px;
+        height: 24px;
+    }
+
+
+    #right-section {
+        width: 80vw !important;
+    }
+
+    .sections {
+        width: auto;
+    }
+
+    .back-mobile {
+        top: -144px;
+        right: 40px;
+    }
+
+    .edit-container {
+        display: none;
+    }
+
+    .mobil-button {
+        display: flex !important;
+        width: 50px;
+        height: 50px;
+        min-width: unset;
+        min-height: unset;
+    }
+
+    .mobile-nav {
+        padding: 8px 0 8px 16px;
+    }
+
+    .board-mobile-menu-with-img {
+        padding: 8px 0 0px 16px;
+    }
+
+    .mobil-button img {
+        padding-left: 0px;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .menu {
+        width: auto !important;
+        flex-direction: row !important;
+        height: 100% !important;
+    }
+
+    .single-menu {
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .single-menu a {
+        flex-direction: column;
+    }
+
+
+    .single-menu img {
+        padding-bottom: 8px;
+    }
+
+    .menu-text {
+        margin-left: 0 !important;
+    }
+
+    .menu-container {
+        height: 100%;
+    }
+
+    .content-contacts {
+        left: 0;
+        width: 100%;
+    }
+
+    .contact-overlay {
+        margin-left: 0;
+    }
+
+
+    #new-contact-btn-mobile {
+        display: none;
+    }
+
+    .new-contact-btn-container {
+        position: relative;
+    }
+
+    #edit-contact-mobile {
+        display: block;
+        width: 52px;
+        padding: 6px 0;
+        min-width: unset;
+        position: absolute;
+        top: -100px;
+        right: 0;
+    }
+
+    .content {
+        left: 30px !important;
+        display: flex;
+        padding-top: 120px;
+        flex-direction: column;
+        position: unset;
+        left: 277px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #contact-content-mobile {
+        height: 60vh;
+        overflow-y: auto;
+    }
+
+    .f-55 {
+        font-size: 45px;
+    }
+
+    .logout {
+        right: 30px;
+    }
+
+
+    .section-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    #add-task-btns {
+        position: fixed;
+        right: 24px;
+        top: 7px;
+        z-index: 1000;
+
+    }
+
+    .profile-pic {
+        height: 40px;
+        width: 40px;
+    }
+
+    .inner-circle {
+        height: 46px;
+        width: 46px;
+    }
+
+    .outer-circle {
+        height: 53px;
+        width: 53px;
+    }
+
+    #createTask {
+        position: fixed;
+        height: 58px;
+    }
+
+    .close-add-task-overlay {
+        right: 31px;
+    }
+
+    #h1-imprint {
+        text-align: start;
+    }
+
+    .headline-line-text-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .headline {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .headline-line {
+        transform: rotate(90deg);
+    }
+
+    #summary-h1 {
+        margin-top: 0;
+    }
+
+    .header-text-mobile {
+        display: block;
+    }
+
+    .right-section {
+        left: 45px !important;
+        top: 50px;
+    }
+
+    .board-content {
+        padding: 100px 0 !important;
+    }
+
+    .board-headline {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .board-text {
+        margin: 15px;
+    }
+
+    .search-blend {
+        top: 51px;
+    }
+
+    .f-12 {
+        font-size: 18px;
+    }
+
+    .board-card {
+        width: 100%;
+    }
+
+    .board-head {
+        width: 53%;
+    }
+
+    .board-inner-card {
+        min-width: 38%;
+        width: 38%;
+    }
+
+    .board-category {
+        font-size: 22px;
+    }
+
+    .board-title {
+        width: 94%;
+        font-size: 22px;
+    }
+
+    .board-description {
+        width: 94%;
+        font-size: 22px;
+        height: fit-content;
+    }
+
+    .progressbar-outer {
+        width: 94%;
+    }
+
+    .progressbar-inner {
+        width: 80%;
+    }
+
+    .board-assigned {
+        width: 88%;
+    }
+
+    .assigned-inner {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .relative {
+        left: -2px;
+    }
+
+    .board-assigned-urgent img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .assigned-area {
+        height: 50px;
+    }
+
+    .board-footer {
+        min-height: 50px;
+    }
+
+    .mobile-searchbox {
+        width: 50%;
+    }
+
+    .searchbox {
+        width: 100%;
+    }
+
+    .main-board {
+        width: 105%;
+        max-width: unset;
+        padding-right: 0;
+    }
+
+    .static-button {
+        display: none;
+    }
+
+    .mobil-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        /* TODO */
+    }
+
+    #nav-item-logout {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .help-content {
+        padding-top: 158px !important;
+        padding-bottom: 80px;
+    }
+
+    .help-container {
+        display: none;
+    }
+
+    .task-overlay {
+        width: 75%;
+        margin-left: 0;
+        max-height: 75vh;
+        overflow-y: scroll;
+    }
+
+    .assigned-outer {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*Display Overlay */
+    .overlay {
+        top: 100px;
+        bottom: 100px;
+    }
+
+    .sections-mobile {
+        height: 68vh;
+    }
+
+    .content-imprint {
+        padding-top: 136px;
+    }
+
+    .summary-width {
+        width: calc(100% - 50px);
+    }
+}
+
+
+@media (max-width: 680px) {
+    .single-menu a {
+        width: 140px !important;
+    }
+
+    .board-assigned {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 665px) {
+    .login-content {
+        width: calc(100vw - 32px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .f-55 {
+        font-size: 45px;
+    }
+
+    .back-btn {
+        top: 26px;
+    }
+
+    .board-head {
+        width: 60%;
+    }
+
+    .board-inner-card {
+        min-width: 60%;
+        width: 60%;
+    }
+
+    .progressbar-inner {
+        width: 75%;
+    }
+
+    .board-assigned {
+        width: 86%;
+    }
+
+    .task-overlay {
+        width: 85%;
+    }
+}
+
+
+
+@media (max-width: 560px) {
+    .single-menu a {
+        width: 110px !important;
+    }
+
+    .board-img {
+        width: 400px;
+    }
+
+    .mobile-searchbox {
+        width: 64%;
+    }
+}
+
+
+
+@media (max-width: 515px) {
+    .input-contact {
+        width: 200px;
+    }
+
+    .not-join-user {
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .join-logo {
+        width: 70px;
+    }
+
+    .summary-card-img {
+        width: 50px !important;
+    }
+
+    .content-cards-bottom-single {
+        width: 170px;
+    }
+
+    .content-cards-middle-single {
+        width: 358px;
+    }
+
+    .content-cards-top {
+        gap: 16px;
+        width: 358px;
+    }
+
+    .progressbar-inner {
+        width: 67%;
+    }
+
+    .board-assigned {
+        width: 84%;
+    }
+
+    .imprint-back {
+        left: 315px;
+    }
+
+    .mobil-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mobil-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .board-category {
+        font-size: 16px;
+    }
+
+    .board-assigned-urgent img {
+        width: 23px;
+    }
+
+    .assigned-inner {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .board-description {
+        font-size: 19px;
+        min-height: 20px;
+    }
+
+    .board-title {
+        font-size: 20px;
+    }
+
+    .overlay-left{
+        border-radius: 0;
+    }
+
+    .contact-overlay {
+        height: 100vh;
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 474px) {
+
+    .board-head {
+        width: 68%;
+    }
+    .progressbar-inner {
+        width: 65%;
+    }
+
+    .board-assigned {
+        width: 84%;
+    }
+}
+
+@media (max-width: 470px) {
+    .imprint-back {
+        left: 275px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .single-menu a {
+        width: 90px !important;
+    }
+
+    .navbar {
+        height: 80px !important;
+    }
+
+    .overlay {
+        bottom: 80px;
+    }
+
+    .content-contacts {
+        top: 80px;
+    }
+
+    .rememberme-forgot {
+        flex-direction: column-reverse;
+        margin-top: 8px !important;
+        align-items: flex-start !important;
+        width: 246px;
+    }
+
+    .rememberme-forgot-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #forgot-password-text {
+        margin-left: 0;
+    }
+
+    #reset-pw-text {
+        margin-bottom: 0;
+    }
+
+    .input-container-reset {
+        margin-top: 14px;
+    }
+
+    .f-55 {
+        font-size: 40px;
+    }
+
+    .login-btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guest-btn-resp {
+        text-align: center;
+        width: 154px;
+        margin-left: 0 !important;
+    }
+
+    .h2-login-resp {
+        width: 60%;
+    }
+
+    .login-overlay {
+        background-color: var(--dark-blue);
+    }
+
+    .join-logo {
+        animation: joinlogoMobile 1s ease 0s 1 normal forwards;
+    }
+
+    .input-contact-login {
+        height: 24px;
+        font-size: 18px;
+    }
+
+    .input-container-login {
+        margin-top: 28px;
+    }
+
+    .guestLogin-btn {
+        margin-left: 0;
+        width: 100px;
+        height: 38px;
+        margin: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-btn-container {
+        margin-top: 8px;
+    }
+
+    .not-join-user {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #signup-btn {
+        margin: 0 0 0 12px;
+        padding: 8px 8px 8px 8px;
+        min-width: 100px;
+    }
+
+    .login-wrapper {
+        width: 350px
+    }
+
+    .input-container-login {
+        width: 246px;
+    }
+
+    .board-img {
+        width: 320px;
+    }
+
+
+    .right-section {
+        left: 24px !important;
+        top: 20px;
+    }
+
+    h1 {
+        margin: 8px 0;
+    }
+
+    .contact-name-big {
+        font-size: 20px !important;
+    }
+
+    .contact-avatar-input {
+        top: 92px !important;
+    }
+
+    #names-letter {
+        font-size: 27px !important;
+    }
+
+    .back-mobile {
+        top: -108px;
+        right: 12px;
+    }
+
+    .progressbar-inner {
+        width: 65%;
+    }
+
+    .board-assigned {
+        width: 84%;
+    }
+
+    .task-overlay {
+        width: 100%;
+        max-height: unset;
+        height: 100vh;
+    }
+
+    #task-display {
+        top: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .content-imprint {
+        padding-top: 162px;
+    }
+
+    .content-cards-top {
+        gap: 12px;
+        width: 324px;
+    }
+
+    .content-cards-middle-single {
+        width: 324px;
+    }
+
+    .content-cards-bottom-single {
+        width: 156px;
+    }
+
+    .content-cards-bottom {
+        gap: 12px;
+    }
+
+    .summary-width {
+        margin-left: 30px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .imprint-back {
+        left: 261px;
+    }
+}
+
+
+@media (max-width: 424px) {
+
+    .board-head {
+        width: 90%;
+    }
+
+    .board-inner-card {
+        min-width: 90%;
+        width: 90%;
+    }
+
+    .progressbar-inner {
+        width: 60%;
+    }
+
+    .board-assigned {
+        width: 83%;
+    }
+}
+
+@media (max-width: 415px) {
+    .imprint-back {
+        left: 207px;
+    }
+}
+
+
+@media (max-width: 375px) {
+
+    .board-head {
+        width: 100%;
+    }
+
+    .board-inner-card {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .progressbar-inner {
+        width: 52%;
+    }
+
+    .board-assigned {
+        width: 81%;
+    }
+
+    .board-img {
+        width: 300px;
+    }
+
+    .summary-width {
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .darkblue-btn {
+        min-width: 120px;
+        max-width: 135px;
+        padding: 8px;
+    }
+
+    .mobil-button {
+        min-width: unset;
+        min-height: unset;
+    }
+
+    .light-btn {
+        width: 120px;
+        padding: 0 8px 0 8px;
+    }
+
+    .single-menu a {
+        width: 80px !important;
+        font-size: 14px;
+    }
+
+    .menu img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .progressbar-inner {
+        width: 46%;
+    }
+
+    .board-assigned {
+        width: 78%;
+    }
+}

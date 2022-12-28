@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/add_task.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_min_1200.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_1040-1180.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_860-1000.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_max_770.css">
+    <link rel="stylesheet" href="css/mobile/mobile_height.css">
+    <link rel="stylesheet" href="css/mobile/mobile_width_max_400.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <script src="script.js"></script>
+    <script src="js/add_task_aside_functions.js"></script>
+    <script src="js/add_task.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/edit_task.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/delete.js"></script>
+    <title>Join-Kanban Board</title>
+</head>
+
+<body onload="initTasks()">
+    <div id="body-board" class="body-contact">
+        <div w3-include-html="./assets/templates/navbar.html"></div>
+
+        <div id="board-content" class="content board-content">
+            <!-- Headline with Search and Add Task-->
+            <div class="board-headline d-flex align-items-center justify-content-space-between">
+                <div class="mobil-head">
+                    <h1>Board</h1>
+                    <button onclick="openAddTaskForm('toDo')"
+                        class="mobil-button darkblue-btn m-left-24 d-flex justify-content-center align-items-center ">
+                        <img class="addTask-btn-icons" src="./assets/img/board/plus.svg">
+                    </button>
+                </div>
+                <div class="mobile-searchbox d-flex justify-content-end">
+                    <form class="searchbox d-flex justify-content-space-between align-items-center w-250" role="search">
+                        <input id="search" class="inputfield" placeholder="Find task" minlength="3" type="text"
+                            onkeyup="searchTasks()">
+                        <div class="search-line"></div>
+                        <img class="btn-icons" src="./assets/img/board/search.svg">
+                    </form>
+                    <button
+                        class="static-button darkblue-btn m-left-24 d-flex justify-content-center align-items-center"
+                        onclick="openAddTaskForm('toDo')"><span class="f-21 btn-text-board">Add Task</span> <img
+                            class="addTask-btn-icons" src="./assets/img/board/plus.svg"></button>
+                </div>
+            </div>
+
+            <!-- Task Progress Headline -->
+            <div id="main-board" class="main-board flex-column d-flex scroll">
+
+                <div class="main-board-area d-flex justify-content-space-between">
+
+                    <div class="todo-area w-23">
+                        <div class="board-head d-flex justify-content-around align-items-center">
+                            <span id="todo-head" class="board-card-header f-21-board f-bold">To do</span>
+                            <img class="board-icons cursor filter-plus-img" src="./assets/img/board/blackPlus.svg"
+                                onclick="openAddTaskForm('toDo')">
+                        </div>
+                        <div id="toDo-card" class="board-card scroll" ondrop="moveTo('toDo')"
+                            ondragstart="showDragCard()" ondragover="allowDrop(event)" ondragend="endDrop()"> </div>
+                    </div>
+                    <!-- <div style="background: #00000014; width: 1px"></div> -->
+                    <div class="progress-area w-23">
+                        <div class="board-head d-flex justify-content-around align-items-center">
+                            <span id="progress-head" class="board-card-header f-21-board f-bold">In progress</span>
+                            <img class="board-icons cursor filter-plus-img" src="./assets/img/board/blackPlus.svg"
+                                onclick="openAddTaskForm('progress')">
+                        </div>
+                        <div id="progress-card" class="board-card scroll" ondrop="moveTo('progress')"
+                            ondragstart="showDragCard()" ondragover="allowDrop(event)" ondragend="endDrop()">
+                        </div>
+                    </div>
+                    <!-- <div style="background: #00000014; width: 1px"></div> -->
+
+                    <div class="feedback-area w-23">
+                        <div class="board-head d-flex justify-content-around align-items-center">
+                            <span id="feedback-head" class="board-card-header f-21-board f-bold">Awaiting
+                                feedback</span>
+                            <img class="board-icons cursor filter-plus-img" src="./assets/img/board/blackPlus.svg"
+                                onclick="openAddTaskForm('feedback')">
+                        </div>
+                        <div id="feedback-card" class="board-card scroll" ondrop="moveTo('feedback')"
+                            ondragover="allowDrop(event); showDragCard()" ondragend="endDrop()">
+                        </div>
+                    </div>
+                    <!-- <div style="background: #00000014; width: 1px"></div> -->
+
+                    <div class="done-area w-23">
+                        <div class="board-head d-flex justify-content-around align-items-center">
+                            <span id="done-head" class="board-card-header f-21-board f-bold">Done</span>
+                            <img class="board-icons cursor filter-plus-img" src="./assets/img/board/blackPlus.svg"
+                                onclick="openAddTaskForm('done')">
+                        </div>
+                        <div id="done-card" class="board-card scroll" ondrop="moveTo('done')"
+                            ondragover="allowDrop(event); showDragCard()" ondragend="endDrop()">
+                        </div>
+                    </div>
+                    <div class="board-footer"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Display Open Task -->
+        <div id="task-display" class="overlay d-flex justify-content-center align-items-center d-none"
+            ></div>
+
+        <!-- Display Delete Task-->
+        <div id="task-display-delete" class="mobileHeight d-none overlay d-flex justify-content-center align-items-center">
+
+        </div>
+
+        <!-- Add Task -->
+        <div id="add-task-overlay-board" class="overlay d-flex justify-content-center align-items-center d-none"
+            onclick="addClassList('add-task-overlay-board', 'd-none')">
+            <div id="add-task-overlay" class="add-task-overlay d-flex justify-content-center align-items-center"
+                onclick="event.stopPropagation()">
+                <div class="add-task-content-display">
+                    <div include-addtask-html="./assets/templates/add_task_template.html"></div>
+                </div>
+                <img src="./assets/img/buttons/close.png" id="close-add-task" alt="" class="close-add-task-overlay"
+                    onclick="closeAddTaskForm('add-task-overlay-board', 'add-task-overlay', 'board'), initTasks()">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+.section-right {
+    margin-left: 100px;
+    border-left: 1px solid var(--light-grey);
+    padding-left: 100px;
+}
+
+.inputfields {
+    width: 422px;
+    height: 45px;
+    outline: none;  
+}
+
+.textareas {
+    width: 422px;
+    height: 90px;
+    outline: none;
+}
+
+.border-fields {
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+}
+
+.input-with-image {
+    background-color: var(--white);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.inputfield-nearby-icon {
+    width: 90%;
+    height: 90%;
+    border: unset;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.input-with-image:hover{
+    cursor: pointer;
+}
+
+.inputfields-small {
+    width: 134px;
+    height: 45px;
+}
+
+.inputfields-small:hover {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.checkbox-text {
+    font-size: 12px;
+    margin-left: 16px;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--black);
+}
+
+.add-task-titles {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.add-task-lists{
+    position: absolute;
+    width: 425px;
+    top: 41px;
+    font-size: 18px;
+    list-style: none;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid var(--light-grey);
+    margin-top: 2px;
+    box-sizing: border-box;
+    padding: 0;
+    height: 145px;
+    overflow: auto;
+}
+
+.add-task-lists li {
+    padding: 12px 0 12px 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.add-task-lists li:hover{
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+
+#categories{
+    z-index: 100;
+}
+
+select{
+    border: none;
+    width: 99%;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+option{
+    cursor: pointer;
+    padding: 8px 0 0 8px;
+    font-size: 18px;
+    
+}
+
+.confirm-selection{
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: white;
+    width: 422px;
+}
+
+.outputbox-assignedto{
+    min-height: 47px;
+    height: max-content;
+}
+
+.choosed-member{
+    padding: 8px 24px 8px 0;
+}
+
+.category-color{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 16px;
+}
+
+
+.subtask-check-img{
+    padding-left: 8px;
+    border-left: 1px solid var(--light-grey);
+}
+
+.subtask-cancel-img{
+    padding-right: 8px;
+}
+
+.subtask-switch-container{
+    width: 95%;
+}
+
+#subtasks-output{
+    width: 422px;
+    height: 156px;
+    overflow-y: scroll;
+}
+
+#add-task-btns{
+    margin-top: 16px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('../assets/img/add_task/calender.svg');
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    filter: invert(54%) sepia(55%) saturate(5447%) hue-rotate(164deg) brightness(98%) contrast(104%);
+}
+
+input[type="date"]{
+    cursor:text;
+}
+
+.hidden-input{
+    width: 1px;
+    height: 0;
+    outline: none;
+    border: none;
+}
+
+.color-outer-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.color-inner-circle{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+
+
+.color-outer-circle-clicked{
+    box-shadow: 0 3px 3px -1px #000000;
+}
+
+.user-response-overlay{
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.added-to-board{
+    margin-bottom: 350px;
+    padding: 16px !important;
+    position: absolute;
+    top: 70vh;
+    right: calc(50vh - 230px);
+}
+
+.colorpicker{
+    width: 319px;
+}
+
+.assignedTo-container{
+    position: relative;
+}
+
+.assignedTo-list{
+    top: 83px;
+    z-index: 2;
+}
+
+.add-task-overlay{
+    background-color: var(--bg-grey);
+    width: 75%;
+    border-radius: 20px;
+    height: 82vh;
+    position: relative;
+}
+
+.close-add-task-overlay {
+    position: absolute;
+    top: 31px;
+    right: 31px;
+    cursor: pointer;
+}
+
+.output-container {
+    width: 373px;
+}
+
+#content-header{
+    text-align: start;
+}

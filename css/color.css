@@ -1,0 +1,100 @@
+:root {
+    --dark-blue: #2A3647;
+    --dark-blue2: hsl(215deg 26% 22%);
+    --dark-blue3: #091931;
+    --light-blue: hsl(198deg 76% 52%);
+    --bg-grey: #F6F7F8;
+    --bg-btn-light: #F5F5F5;
+    --font-grey: #CDCDCD;
+    --light-grey: #D1D1D1;
+    --white: #FFFFFF;
+    --black: #000000;
+    --progress: #29ABE2;
+    --urgent: #d73e0e;
+    --low: #6cbb2f;
+    --medium: #ffa800;
+    --sales: #cb79a0;
+    --backoffice: #5f986e;
+    --design: #e79566;
+    --marketing: #719dd6;
+    --media: #f5d26f;
+    --newCategory0: rgb(168, 93, 93);   
+    --newCategory1: rgb(88, 49, 77);   
+    --newCategory2: rgb(92, 110, 50);   
+    --newCategory3: rgb(66, 37, 94);   
+    --newCategory4: rgb(31, 153, 92);   
+    --newCategory5: rgb(40, 105, 148);   
+    --newCategory6: rgb(2, 75, 2);
+}
+
+.color-red{
+    color: red;
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.color-black {
+    color: var(--black);
+}
+
+.bg-urgent {
+    background-color: var(--urgent);
+}
+
+.bg-low {
+    background-color: var(--low);
+}
+
+.bg-medium {
+    background-color: var(--medium);
+}
+
+.bg-category-Sales {
+    background-color: var(--sales);
+}
+
+.bg-category-Backoffice {
+    background-color: var(--backoffice);
+}
+
+.bg-category-Design {
+    background-color: var(--design);
+}
+
+.bg-category-Marketing {
+    background-color: var(--marketing);
+}
+
+.bg-category-Media{
+    background-color: var(--media);
+}
+
+.bg-category-New-0{
+    background-color: var(--newCategory0);
+}
+
+.bg-category-New-1{
+    background-color: var(--newCategory1);
+}
+
+.bg-category-New-2{
+    background-color: var(--newCategory2);
+}
+
+.bg-category-New-3{
+    background-color: var(--newCategory3);
+}
+
+.bg-category-New-4{
+    background-color: var(--newCategory4);
+}
+
+.bg-category-New-5{
+    background-color: var(--newCategory5);
+}
+
+.bg-category-New-6 {
+    background-color: var(--newCategory6);
+}

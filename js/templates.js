@@ -49,7 +49,7 @@ function renderContactDetails(firstLetter, secondLetter, name, email, color, pho
                         </div>
                         <div class="contact-data-big">
                             <p id="contact-name-big" class="contact-name-big">${name}</p>
-                            <div class="add-task d-flex curserPointer" onclick="openAddTaskForm('toDo', ['${email}'])">
+                            <div class="add-task d-flex curserPointer" onclick="openAddTaskForm('toDo', ['${email}']); window.scrollTo(0, 0)">
                                 <img src="./assets/img/buttons/add_light_blue.svg" alt="">
                                 <p class="blue-font">Add task</p>
                             </div>
@@ -87,7 +87,7 @@ function renderContactMobileBtnTemplate(email) {
         <img class="btn-icons-contact" src="./assets/img/buttons/newcontact.png" alt="">
     </button>
     <button id="edit-contact-mobile" class="darkblue-btn m-left-24 d-none"
-        onclick="showOverlayContact('edit-contact', 'edit-contact-overlay', '${email}')">
+        onclick="showOverlayContact('edit-contact', 'edit-contact-overlay', '${email}'); window.scrollTo(0, 0)">
         <img src="./assets/img/add_task/edit_white.png" alt="">
     </button>
     `

@@ -135,6 +135,7 @@ function getContactDetails(i) {
 
 function showContactDetailsMobile(id) {
     document.getElementById('contact-content-mobile').style.display = 'none';
+    document.getElementById('overlayLeft').style.display = 'none';
     showContactDetails(id);
     document.getElementById('right-section').style.display = 'flex';
     addClassList('new-contact-btn-mobile', 'd-none');
@@ -142,6 +143,7 @@ function showContactDetailsMobile(id) {
 
 
 function returnToContactOverview() {
+    document.getElementById('overlayLeft').style.display = 'block';
     document.getElementById('contact-content-mobile').style.display = 'flex';
     document.getElementById('right-section').style.display = 'none';
 }

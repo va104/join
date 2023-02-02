@@ -1,33 +1,53 @@
 @media (max-width: 400px) {
 
-     .right-section {
+     /* .right-section {
         height: 100%;
     } 
 
-      .overlay {
-        position: absolute;
-        top: 0;
-        background-color: var(--bg-grey);
-        height: calc(100% - 80px);
-    } 
     
     
-    .content-contacts {
-        position: relative;
-        height: 100%;
-    } 
 
+    
     #edit-contact-mobile{
         bottom: 100px;
         top: unset;
     }
     
-
+    
     #edit-contact {
         height: 100vh !important;
         position: fixed;
         top: 0;
         bottom: 0;
         overflow: hidden !important;
+    } */
+
+    .overlay {
+        top: 0;
+        bottom: 0;
+        background-color: var(--bg-grey);
+    } 
+
+    .left-section {
+            height: unset;
+            overflow-y: unset;
     }
+
+    
+
+    .right-section {
+        bottom: unset;
+    }
+
+    .content-contacts{
+            position: absolute !important;
+            overflow: scroll;
+            bottom: 80px;
+    } 
+    
+    #add-task-overlay-board {
+            position: absolute !important;
+            overflow: scroll;
+    } 
+
 }

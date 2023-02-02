@@ -198,10 +198,10 @@
 @media (max-height: 700px) {
 
 
-    #contact-content-mobile {
+    /* #contact-content-mobile {
         height: 60vh;
         overflow-y: auto;
-    }
+    } */
 
     .content {
         padding-top: 87px;

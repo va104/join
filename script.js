@@ -5,6 +5,13 @@ let activeURL;
 let userIndexForgotPassword;
 let currentAddTaskData;
 let mobileNavToggle = false;
+// import {initDummyContent} from './js/fillDummyContact'
+
+// every 24 hours the function is called to overwrite the content with default values
+// setInterval(() => {
+//     setDummyContent();
+//      console.log('test')
+// }, 5000);
 
 async function init() {
     await includeHTML('w3-include-html');

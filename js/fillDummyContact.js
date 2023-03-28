@@ -1,12 +1,19 @@
 let userInfo = {};
 const dummyUser = [
     {
+        fullname: 'Guest Account',
+        password: '1234',
+        mail: 'guest@web.de',
+        img: './assets/img/contacts/newUser.png',
+        color: '#808080',
+        phone: '',
+    },
+    {
         fullname: 'Vanessa Würdinger',
         password: '100495',
         mail: 'vanessa.wuerdinger@gmx.de',
         img: './assets/img/profiles/vanessa.png',
         color: '#ffa78c',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -15,7 +22,6 @@ const dummyUser = [
         mail: 'anton@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#d2ae66',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -24,7 +30,6 @@ const dummyUser = [
         mail: 'schulz@hotmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#ed7179',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -33,7 +38,6 @@ const dummyUser = [
         mail: 'benedikt@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#cbaacb',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -42,7 +46,6 @@ const dummyUser = [
         mail: 'davidberg@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#abdee6',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -51,7 +54,6 @@ const dummyUser = [
         mail: 'eva@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#d5a07e',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -60,7 +62,6 @@ const dummyUser = [
         mail: 'emmanuelMa@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#648181',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -69,7 +70,6 @@ const dummyUser = [
         mail: 'bauer@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#96a7ba',
-        // color: getRandomColor(),
         phone: '012345/678910',
     },
     {
@@ -78,7 +78,22 @@ const dummyUser = [
         mail: 'wolf@gmail.com',
         img: './assets/img/contacts/newUser.png',
         color: '#97c1a9',
-        // color: getRandomColor(),
+        phone: '012345/678910',
+    },
+    {
+        fullname: 'Hans Peter',
+        password: '100495',
+        mail: 'h.peter@gmx.com',
+        img: './assets/img/contacts/newUser.png',
+        color: '#329a7b',
+        phone: '012345/678910',
+    },
+    {
+        fullname: 'Benjamin Schmidt-Müller',
+        password: '100495',
+        mail: 'b.smueller@yahoo.com',
+        img: './assets/img/contacts/newUser.png',
+        color: '#6e6686',
         phone: '012345/678910',
     },
 ];
@@ -118,8 +133,8 @@ const dummyTasks = [
         , 'category': 'Design'
         , 'member': ['Tatjana Wolf', 'Anton Mayer', 'Anja Schulz']
         , 'invite': 'none'
-        , 'duedate': '12.11.2022'
-        , 'duedateOrgin': '2022-11-12'
+        , 'duedate': '05.05.2023'
+        , 'duedateOrgin': '2023-05-05'
         , 'prio': 'low'
         , 'status': 'toDo'
         , 'subtasks': ['Redesign', 'Mockup Design']
@@ -132,8 +147,8 @@ const dummyTasks = [
         , 'category': 'Sales'
         , 'member': ['Emmanuel Mauer', 'Vanessa Würdinger' , 'Anja Schulz', 'Benedikt Ziegler']
         , 'invite': 'none'
-        , 'duedate': '24.11.2022'
-        , 'duedateOrgin': '2022-11-24'
+        , 'duedate': '06.07.2023'
+        , 'duedateOrgin': '2023-07-06'
         , 'prio': 'urgent'
         , 'status': 'progress'
         , 'subtasks': []
@@ -146,8 +161,8 @@ const dummyTasks = [
         , 'category': 'Backoffice'
         , 'member': ['Anton Mayer', 'Tatjana Wolf', 'David Eisenberg', 'Vanessa Würdinger', 'Marcel Bauer']
         , 'invite': 'none'
-        , 'duedate': '05.01.2023'
-        , 'duedateOrgin': '2023-01-05'
+        , 'duedate': '05.03.2024'
+        , 'duedateOrgin': '2024-03-05'
         , 'prio': 'medium'
         , 'status': 'feedback'
         , 'subtasks': []
@@ -174,20 +189,54 @@ const dummyTasks = [
         , 'category': 'Marketing'
         , 'member': ['Tatjana Wolf', 'Anja Schulz']
         , 'invite': 'none'
-        , 'duedate': '15.12.2022'
-        , 'duedateOrgin': '2022-12-15'
+        , 'duedate': '08.04.2023'
+        , 'duedateOrgin': '2023-04-08'
         , 'prio': 'low'
         , 'status': 'done'
         , 'subtasks':['write campaign', 'document campaing', 'ask for customer feedback']
         , 'finishedsubtasks': ['write campaign', 'document campaing', 'ask for customer feedback']
         , 'complete': false
     },
+    {
+        'title': 'Market conditions'
+        , 'description': 'Analysis of market conditions for better understandig of the opponents'
+        , 'category': 'Marketing'
+        , 'member': ['Anton Mayer', 'David Eisenberg', 'Eva Fischer']
+        , 'invite': 'none'
+        , 'duedate': '25.04.2023'
+        , 'duedateOrgin': '2023-04-25'
+        , 'prio': 'medium'
+        , 'status': 'progress'
+        , 'subtasks':['examining market trends']
+        , 'finishedsubtasks': ['examining market trends']
+        , 'complete': false
+    },
+    {
+        'title': 'Brand Identity'
+        , 'description': 'Development of a new brand identity'
+        , 'category': 'Media'
+        , 'member': ['Vanessa Würdinger', 'Marcel Bauer']
+        , 'invite': 'none'
+        , 'duedate': '08.10.2023'
+        , 'duedateOrgin': '2023-10-08'
+        , 'prio': 'urgent'
+        , 'status': 'progress'
+        , 'subtasks':['creating brand name', 'new logo', 'visual identity', 'slogan']
+        , 'finishedsubtasks': []
+        , 'complete': false
+    },
 ]
 
-function initDummyContent() {
-     fillDummyUser()
-    ,addStaticCategories()
-    ,addDummyTasks()
+const setDummyContent = async function initDummyContent() {
+    await backend.deleteItem('allTasks')
+    await backend.deleteItem('allCategories'),
+    await backend.deleteItem('userInformation'),
+    userInformation = [];
+    allTasks = [];
+    allCategories = [];
+    fillDummyUser(),
+    addStaticCategories(),
+    addDummyTasks()
 }
 async function fillDummyUser() {
     for (let i = 0; i < dummyUser.length; i++) {
@@ -203,7 +252,6 @@ async function fillDummyUser() {
         await backend.setItem('userInformation', JSON.stringify(userInformation));
     }
 }
-
 
 async function addStaticCategories() {
     for (let i = 0; i < staticCategories.length; i++) {
